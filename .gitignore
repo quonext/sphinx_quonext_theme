@@ -5,7 +5,7 @@
 .tox
 .coverage
 *.DS_Store
-*.sass-cache
+*.sphinx-rtd-theme-cache
 .ropeproject/
 .ruby-version
 dist/

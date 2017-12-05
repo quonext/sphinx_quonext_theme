@@ -2,19 +2,19 @@
 .. _bower: http://www.bower.io
 .. _sphinx: http://www.sphinx-doc.org
 .. _compass: http://www.compass-style.org
-.. _sass: http://www.sass-lang.com
+.. _sphinx-rtd-theme: http://www.sphinx-rtd-theme-lang.com
 .. _wyrm: http://www.github.com/snide/wyrm/
 .. _grunt: http://www.gruntjs.com
 .. _node: http://www.nodejs.com
 .. _demo: http://docs.readthedocs.org
 .. _hidden: http://sphinx-doc.org/markup/toctree.html
 
-.. image:: https://img.shields.io/pypi/v/sphinx_rtd_theme.svg
-   :target: https://pypi.python.org/pypi/sphinx_rtd_theme
-.. image:: https://travis-ci.org/rtfd/sphinx_rtd_theme.svg?branch=master
-   :target: https://travis-ci.org/rtfd/sphinx_rtd_theme
-.. image:: https://img.shields.io/pypi/l/sphinx_rtd_theme.svg
-   :target: https://pypi.python.org/pypi/sphinx_rtd_theme/
+.. image:: https://img.shields.io/pypi/v/sphinx_quonext_theme.svg
+   :target: https://pypi.python.org/pypi/sphinx_quonext_theme
+.. image:: https://travis-ci.org/rtfd/sphinx_quonext_theme.svg?branch=master
+   :target: https://travis-ci.org/rtfd/sphinx_quonext_theme
+.. image:: https://img.shields.io/pypi/l/sphinx_quonext_theme.svg
+   :target: https://pypi.python.org/pypi/sphinx_quonext_theme/
    :alt: license
 
 **************************
@@ -28,7 +28,7 @@ View a working demo_ over on readthedocs.org_.
 This is a mobile-friendly sphinx_ theme I made for readthedocs.org_.
 
 If you'd like to update the theme,
-please make your edits to the SASS files here,
+please make your edits to the sphinx-rtd-theme files here,
 rather than the .css files on checked into the repo.
 
 .. image:: demo_docs/source/static/screen_mobile.png
@@ -44,32 +44,32 @@ Download the package or add it to your ``requirements.txt`` file:
 
 .. code:: bash
 
-    pip install sphinx_rtd_theme
+    pip install sphinx_quonext_theme
 
 In your ``conf.py`` file:
 
 .. code:: python
 
-    import sphinx_rtd_theme
-    html_theme = "sphinx_rtd_theme"
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    import sphinx_quonext_theme
+    html_theme = "sphinx_quonext_theme"
+    html_theme_path = [sphinx_quonext_theme.get_html_theme_path()]
 
 or (since v0.2.5):
 
 .. code:: python
 
-    html_theme = "sphinx_rtd_theme"
+    html_theme = "sphinx_quonext_theme"
 
 Via git or download
 -------------------
 
-Symlink or subtree the ``sphinx_rtd_theme/sphinx_rtd_theme`` repository into your documentation at
-``docs/_themes/sphinx_rtd_theme`` then add the following two settings to your Sphinx
+Symlink or subtree the ``sphinx_quonext_theme/sphinx_quonext_theme`` repository into your documentation at
+``docs/_themes/sphinx_quonext_theme`` then add the following two settings to your Sphinx
 ``conf.py`` file:
 
 .. code:: python
 
-    html_theme = "sphinx_rtd_theme"
+    html_theme = "sphinx_quonext_theme"
     html_theme_path = ["_themes", ]
 
 Configuration
@@ -80,7 +80,7 @@ You can configure different parts of the theme.
 Project-wide configuration
 --------------------------
 
-The theme's project-wide options are defined in the ``sphinx_rtd_theme/theme.conf``
+The theme's project-wide options are defined in the ``sphinx_quonext_theme/theme.conf``
 file of this repository, and can be defined in your project's ``conf.py`` via
 ``html_theme_options``. For example:
 
@@ -135,7 +135,7 @@ master
 * Add language to the JS output variable
 * Include the lato italics font with the theme
 * Fix padding on field lists
-* Add setuptools entry point allowing to use ``sphinx_rtd_theme`` as
+* Add setuptools entry point allowing to use ``sphinx_quonext_theme`` as
   Sphinx ``html_theme`` directly.
 
 v0.2.4
@@ -195,7 +195,7 @@ v0.1.9
 * Fixed modernizr URL
 * Small display style changes on code blocks, figure captions, and nav elements
 
-.. _#215: https://github.com/rtfd/sphinx_rtd_theme/pull/215
+.. _#215: https://github.com/rtfd/sphinx_quonext_theme/pull/215
 
 v0.1.8
 ------
@@ -228,8 +228,8 @@ altogether change the setting in ``conf.py``.
 Contributing or modifying the theme
 ===================================
 
-The sphinx_rtd_theme is primarily a sass_ project that requires a few other sass libraries. I'm
-using bower_ to manage these dependencies and sass_ to build the css. The good news is
+The sphinx_quonext_theme is primarily a sphinx-rtd-theme_ project that requires a few other sphinx-rtd-theme libraries. I'm
+using bower_ to manage these dependencies and sphinx-rtd-theme_ to build the css. The good news is
 I have a very nice set of grunt_ operations that will not only load these dependencies, but watch
 for changes, rebuild the sphinx demo docs and build a distributable version of the theme.
 The bad news is this means you'll need to set up your environment similar to that
@@ -244,11 +244,11 @@ Set up your environment
    
        pip install sphinx sphinxcontrib-httpdomain
 
-#. Install sass.
+#. Install sphinx-rtd-theme.
 
    .. code:: bash
 
-       gem install sass
+       gem install sphinx-rtd-theme
 
 #. Install node, bower, grunt, and theme dependencies.
 
@@ -274,7 +274,7 @@ This default task will do the following **very cool things that make it worth th
 
 #. Install and update any bower dependencies.
 #. Run sphinx and build new docs.
-#. Watch for changes to the sass files and build css from the changes.
+#. Watch for changes to the sphinx-rtd-theme files and build css from the changes.
 #. Rebuild the sphinx docs anytime it notices a change to ``.rst``, ``.html``, ``.js``
    or ``.css`` files.
 
@@ -282,7 +282,7 @@ Before you create an issue
 --------------------------
 
 I don't have a lot of time to maintain this project due to other responsibilities.
-I know there are a lot of Python engineers out there that can't code sass / css and
+I know there are a lot of Python engineers out there that can't code sphinx-rtd-theme / css and
 are unable to submit pull requests. That said, submitting random style bugs without
 at least providing sample documentation that replicates your problem is a good
 way for me to ignore your request. RST unfortunately can spit out a lot of things
@@ -295,7 +295,7 @@ Releasing the Theme
 When you release a new version,
 you should do the following:
 
-#. Bump the version in ``sphinx_rtd_theme/__init__.py`` – we try to follow `semver <http://semver.org/>`_, so be careful with breaking changes.
+#. Bump the version in ``sphinx_quonext_theme/__init__.py`` – we try to follow `semver <http://semver.org/>`_, so be careful with breaking changes.
 #. Run a ``grunt build`` to rebuild all the theme assets.
 #. Commit that change.
 #. Tag the release in git: ``git tag $NEW_VERSION``.
@@ -307,4 +307,4 @@ you should do the following:
 TODO
 ====
 
-* Separate some sass variables at the theme level so you can overwrite some basic colors.
+* Separate some sphinx-rtd-theme variables at the theme level so you can overwrite some basic colors.

@@ -1,7 +1,7 @@
 {
   "name": "sphinx-rtd-theme",
   "version": "0.2.4",
-  "homepage": "https://github.com/rtfd/sphinx_rtd_theme",
+  "homepage": "https://github.com/rtfd/sphinx_quonext_theme",
   "authors": [
     "Dave Snider <dave.snider@gmail.com>"
   ],
@@ -15,7 +15,7 @@
     "demo_docs",
     ".gitignore",
     ".DS_Store",
-    ".sass-cache*",
+    ".sphinx-rtd-theme-cache*",
     ".bowerrc",
     "bower.json",
     "package.json",
