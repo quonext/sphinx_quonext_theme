@@ -37,10 +37,11 @@
     {% block breadcrumbs_aside %}
       <li class="wy-breadcrumbs-aside">
 
-
+        {% if github_url %}
 
         <a href="{{ github_url }}edit/master/source/{{ pagename }}{{ suffix }}" class="fa fa-github"> {{ _('Edit on GitHub') }}</a>
 
+        {% endif %}
 
 
         {% if hasdoc(pagename) %}
