@@ -36,7 +36,18 @@
     {% endblock %}
     {% block breadcrumbs_aside %}
       <li class="wy-breadcrumbs-aside">
+
+        {% if github_url is defined %}
+
+
+        <a href="{{ github_url }}/edit/master/{{ '_sources/' + sourcename }}" class="fa fa-github"> {{ _('Edit on GitHub') }}</a>
+
+
+        {% endif % %}
+
+
         {% if hasdoc(pagename) %}
+
             {% if display_github %}
             {% if check_meta and 'github_url' in meta %}
               <!-- User defined GitHub URL -->
