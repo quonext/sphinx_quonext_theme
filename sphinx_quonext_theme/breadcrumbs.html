@@ -43,8 +43,10 @@
 
         {% endif %}
 
+          <a href="/manual.pdf">PDF</a>
 
-        {% if hasdoc(pagename) %}
+
+          {% if hasdoc(pagename) %}
 
             {% if display_github %}
             {% if check_meta and 'github_url' in meta %}
@@ -72,7 +74,6 @@
           {% elif show_source and has_source and sourcename %}
             <a href="{{ pathto('_sources/' + sourcename, true)|e }}" rel="nofollow"> {{ _('View page source') }}</a>
           {% endif %}
-          <a href="/Quotravelmanualusuario.pdf">PDF</a>
         {% endif %}
       </li>
     {% endblock %}
